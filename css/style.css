@@ -11,6 +11,7 @@
   --padding-top:40px;
   --padding-bottom: 40px;
   --background:#ece7e73b;
+  --transition-section:0.6s
 }
 /* ############################### */
 .container {
@@ -239,14 +240,29 @@ position: absolute;
       font-size: 16px;
     }
 }
-
+.landing-page .landing .box{
+position: absolute;
+  width: fit-content;
+  border: 5px solid;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 304px;
+  right: 10%;
+  top: 25%;
+  z-index: 3;
+}
+@media (max-width:768px){
+  .landing-page .landing .box{
+    display: none;
+  }
+}
 .landing-page .landing img{
-    position: absolute;
+    /* position: absolute; */
       width: 300px;
-      right: 15%;
-      top: 30%;
+      /* right: 15%;
+      top: 30%; */
   z-index: 2;
-  display: none;
+  /* display: none; */
 }
 .active{
   color: var(--main-color) !important;
@@ -384,7 +400,7 @@ margin: 0;
   padding: 20px;
   margin: auto;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #e1e1e1;
   z-index: 2001;
 }
 .popup-box img{
@@ -411,3 +427,288 @@ margin: 0;
   border-radius: 50%;
 }
 /* End project */
+
+/* Start skills */
+.skills{
+  background-color: var(--background);
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
+.skills .container{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+padding: 30px 0;
+}
+.skills .container .box{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color:var(--background);
+  /* background-color:#FFF; */
+}
+@media (max-width:992px){
+  .skills .container .box {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background-color: var(--background);
+    }
+}
+@media (max-width:768px) {
+  .skills .container .box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: var(--background);
+  }
+}
+.skills .container .box .circul{
+position: relative;
+width: 80%;
+height: 80%;
+background: conic-gradient(var(--main-color) 0deg, #dfdddd 0deg);
+margin:  auto;
+border-radius: 50%;
+text-align: center;
+top: 10%;
+}
+.skills .container .box .circul::before{
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: #fff;
+  left: 5%;
+  top: 5%;
+  border-radius: 50%;
+  z-index: 1;
+}
+.skills .container .box .count{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%,-50%);
+  font-weight: bold;
+    font-size: 22px;
+  color: var(--main-color);
+
+}
+@media (max-width:992px){
+  .skills .container .box .count{
+    font-size: 18px;
+  }
+}
+@media (max-width:768px) {
+  .skills .container .box .count {
+    font-size: 15px;
+  }
+}
+.skills .container .box .skill{
+position: absolute;
+bottom: -25px;
+left: 50%;
+transform: translateX(-50%);
+font-size: 20px;
+font-weight: bold;
+color: var(--main-color);
+
+}
+@media (max-width:992px){
+  .skills .container .box .skill{
+    font-size: 18px;
+  }
+}
+@media (max-width:768px) {
+  .skills .container .box .skill {
+    font-size: 15px;
+  }
+}
+/* End skills */
+
+/* Start Setction  About*/
+
+.about{
+background-color: var(--background);
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+}
+.about .container{
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+}
+.about .container .image{
+flex-basis: 40%;
+margin-top: 20px;
+display: flex;
+justify-content: center;
+/* border: 1px solid black; */
+overflow: hidden;
+
+}
+@media (min-width:1200px){
+  .about .container .image{
+    position: relative;
+      left: -500px;
+      transition: var(--transition-section);
+  }
+}
+.about .container .image img{
+/* max-width: 100%; */
+    width: 330px;
+position: relative;
+bottom: -22px;
+}
+.about .container .info{
+flex-basis: 50%;
+
+}
+@media (min-width:1200px) {
+  .about .container .info {
+    position: relative;
+    right: -500px;
+    transition: var(--transition-section);
+  }
+}
+.about .container .info h3{
+text-align: center;
+}
+.about .container .info p{
+  text-align: center;
+  /* text-align: justify; */
+    color: #6a6a6a;
+  line-height: 1.7;
+
+}
+@media (max-width:992px){
+  .about .container{
+    flex-direction: column;
+  }
+  .about .container .image {
+    width: 80%;
+  }
+  .about .container .info {
+    width: 80%;
+  }
+    .about .container .info p{
+      text-align: justify;
+    }
+}
+/* End Section about */
+
+/* Start Contact */
+.contact{
+  background-color: var(--background);
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+}
+.contact .container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px 0;
+}
+.contact .container .info{
+flex-basis: 50%;
+/* border-right: 1px solid; */
+display: flex;
+justify-content: center;
+align-items:center;
+/* background-color: rgba(227, 227, 227, 0.938); */
+}
+.contact .container .info div{
+
+}
+.contact .container .info div h2{
+  text-align: center;
+}
+.contact .container .info div p{
+  text-align: center;
+  color: gray;
+  line-height: 1.8;
+}
+.contact .container .info div ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  padding: 0;
+}
+.contact .container .info div ul a{
+  display: block;
+}
+.contact .container .info div ul  i{
+  font-size: 30px;
+  transition: var(--transition);
+}
+.contact .container .info div ul li:nth-child(1) i{
+  color: #000;
+}
+.contact .container .info div ul  li:nth-child(2) i {
+color: blue;
+}
+.contact .container .info div ul  li:nth-child(3) i {
+color: #ff2929;
+}
+.contact .container .info div ul  li:nth-child(4) i{
+color: #0c62e3;
+}
+.contact .container .content-form{
+flex-basis: 50%;
+    background-color: rgb(218 214 214 / 36%);
+padding: 30px 0;
+}
+.contact .container .content-form form{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* overflow: hidden; */
+}
+.contact .container .content-form form .input-row{
+  display: flex;
+  gap: 15px;
+
+}
+.contact .container .content-form form input{
+width: 100%;
+outline: 0;
+height: 40px;
+padding-left: 15px;
+border-radius: 5px;
+border: 1px solid;
+}
+.contact .container .content-form form ::placeholder{
+  transition: var(--transition-section);
+}
+.contact .container .content-form form input[type="email"]{
+  width: 96%;
+  /* background-color: rebeccapurple; */
+}
+.contact .container .content-form form textarea{
+height: 100px;
+resize: none;
+outline: 0;
+border: 1px solid;
+padding-left: 10px;
+border-radius: 5px;
+}
+.contact .container form textarea:focus::placeholder,
+.contact .container form input:focus::placeholder{
+  opacity: 0;
+}
+.contact .container form button{
+  background-color: var(--main-color);
+  padding: 10px 0;
+  outline: 0;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+/* End Contact */

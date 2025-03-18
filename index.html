@@ -51,12 +51,15 @@
         <h1>My name is<span class="active"> khlaid</span></h1>
         <h1>& I'm a <span class="active move">web developpment</span></h1>
       </div>
-      <img src="img/landing1.webp" alt="">
+      <div class="box">
+        <img src="img/imdev.png" alt="">
+      </div>
+       <!-- <img src="img/imdev 2.png" alt=""> -->
     </div>
    </div>
   <!-- End landing page -->
 
-  <!-- Start about me -->
+  <!-- Start what I do  -->
    <div class="about-me">
     <h1 class="active main">What I do ?</h1>
     <p class="main-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
@@ -98,7 +101,7 @@
 
     </div>
    </div>
-   <!-- End about me -->
+   <!-- End what I do -->
 
   <!-- start project -->
    <div class="project">
@@ -128,14 +131,103 @@
    <!-- End project -->
 
   <!-- Start skills -->
-   <div class="skills">
+   <div class="skills" id ="sectionOfScroll">
     <h1 class="active main">My Skills</h1>
     <p class="main-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     <div class="container">
+      <div class="box">
+        <div class="circul" data-count="85"></div>
+        <span class="count">0%</span>
+        <span class="skill">  HTML</span>
+      </div>
+      <div class="box">
+        <div class="circul" data-count="90"></div>
+        <span class="count">0%</span>
+        <span class="skill"> CSS</span>
+      </div>
+      <div class="box">
+        <div class="circul" data-count="70"></div>
+        <span class="count">0%</span>
+        <span class="skill"> javaScript</span>
+      </div>
+      <div class="box">
+        <div class="circul" data-count="65"></div>
+        <span class="count" >0%</span>
+        <span class="skill"> PHP</span>
+      </div>
       
     </div>
    </div>
    <!-- End skills -->
+  
+   <!-- Start Section About -->
+    <div class="about" id="About">
+      <h1 class="active main">About</h1>
+      <p class="main-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="container">
+        <div class="image" id="img-about">
+          <!-- <img src="img/OIP.jpeg" alt=""> -->
+           <img src="img/imdev.png" alt="">
+        </div>
+        <div class="info" id="info-about">
+          <h3 class="active">About me</h3>
+          <p>
+            I am a dedicated programming student with a strong foundation in JavaScript, HTML, CSS, and problem-solving. My goal is
+            to become a full-stack developer, building dynamic and efficient web applications.
+            
+            I have already developed a travel website, showcasing my ability to design and implement interactive user experiences. I
+            am always eager to learn new technologies and improve my skills through continuous practice and discipline.
+            
+            Currently, I am looking for opportunities to grow as a full-stack developer, collaborate on exciting projects, and
+            contribute to innovative web solutions. Let's connect! 🚀
+          </p>
+        </div>
+      </div>
+
+    </div>
+  <!-- End Section About -->
+
+    <!-- Start Contact -->
+    
+    <div class="contact">
+      <h1 class="active main">Contact</h1>
+      <p class="main-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="container">
+        <div class="info">
+          <div>
+            <h2 class="active">Social Media</h2>
+            <p>
+               I am available on almost in linkedin and instagram.
+               You can message me, I will reply within 24 hours. 
+               I can help you with HTML,
+               CSS, JavaScript, PHP, PYTHON, MY SQL.
+          </p>
+          <ul>
+            <li><a href="" id=""><i class="fa-brands fa-square-github"></i></a></li>
+            <li><a href="" id=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="" id=""><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href="" id=""><i class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+          </div>
+        </div>
+        <div class="content-form">
+          <form action="">
+            <div class="input-row">
+              <input type="text" placeholder="Enter your First Name">  
+              <input type="text" placeholder="Enter your Last Name">
+            </div>
+            <input type="email" placeholder="Enter your Email">
+            <textarea name="" id="" placeholder="Enter your Message"></textarea>
+            <button >Send</button>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+     <!-- End Contact -->
+
+
   <script src="main.js"></script>
 </body>
 </html>

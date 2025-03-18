@@ -41,7 +41,7 @@ let active=document.querySelector(".active")
 
 if(window.localStorage.getItem("color")){
     document.documentElement.style.setProperty('--main-color',window.localStorage.getItem("color"))
-    console.log("yes")
+    // console.log("yes")
 
 }
 
@@ -140,3 +140,67 @@ document.addEventListener("click",(e)=>{
 
   }
 })
+
+
+// Section skills
+
+
+function animateTheSkills(){
+  let circuls=document.querySelectorAll(".skills .container .box .circul")
+  let spanConter=document.querySelectorAll(".skills .container .box .count")
+
+  circuls.forEach((circul,index)=>{
+    let startValue=0
+    let maxCounter=parseInt(circul.dataset.count)
+    let interval=setInterval(()=>{
+      if(startValue>maxCounter){
+        clearInterval(interval)
+      }
+      circul.style.background=`conic-gradient(${window.localStorage.getItem("color")} ${startValue * 3.6}deg, #dfdddd 0deg)`
+      spanConter[index].textContent=startValue+"%"
+      startValue++
+    },40)
+
+
+  })
+}
+
+function scroll(){
+  let scrollSection=document.getElementById("sectionOfScroll")
+  let topSection=scrollSection.getBoundingClientRect().bottom
+  // console.log(topSection)
+  console.log(window)
+
+  let screenHeight=window.innerHeight
+  if(topSection<screenHeight){
+    animateTheSkills()
+    window.removeEventListener("scroll", scroll);
+  }
+}
+window.addEventListener("scroll", scroll);
+
+
+// Section About
+let skills=document.getElementById("sectionOfScroll")
+let circuls=document.querySelectorAll(".skills .container .box .circul")
+let spanConter=document.querySelectorAll(".skills .container .box .count")
+
+let about=document.getElementById("About")
+window.onscroll=function(){
+  // About Offset Top
+  let aboutOfsetTop=about.offsetTop;
+ 
+
+  if(window.scrollY>=aboutOfsetTop -100){
+      this.console.log("yes I run")
+
+      let imgAbout=document.querySelector(".about .container .image")
+      let infoAbout=document.querySelector(".about .container .info")
+
+      imgAbout.style.cssText="left:0;"
+      infoAbout.style.cssText="right:0;"
+
+  };
+};
+ 
+
