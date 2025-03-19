@@ -23,7 +23,7 @@
 }
 
 /*Small*/
-@media (min-width:768px) {
+@media (min-width:768px) {²²
   .container {
     width: 750px;
   }
@@ -319,6 +319,7 @@ padding-top: var(--padding-top);
   align-items: center;
   gap: 40px;
   background: #ffffffbf;
+  overflow: hidden;
 }
 @media (max-width:768px) {
   .about-me .container {
@@ -326,8 +327,9 @@ padding-top: var(--padding-top);
     flex-direction: column;
   }
 }
-.about-me .container img{
+.about-me .container .image{
     width: 400px;
+    
 }
 
 .about-me .container .info{
@@ -604,6 +606,7 @@ text-align: center;
   background-color: var(--background);
   padding-top: var(--padding-top);
   padding-bottom: var(--padding-bottom);
+  overflow: hidden;
 }
 .contact .container{
 display: flex;
@@ -611,13 +614,20 @@ justify-content: space-between;
 align-items: center;
 padding: 30px 0;
 }
+@media (max-width:992px){
+  .contact .container{
+    flex-direction: column;
+  }
+}
 .contact .container .info{
 flex-basis: 50%;
 /* border-right: 1px solid; */
 display: flex;
 justify-content: center;
 align-items:center;
-/* background-color: rgba(227, 227, 227, 0.938); */
+position: relative;
+left: -600px;
+  transition: var(--transition-section);
 }
 .contact .container .info div{
 
@@ -661,6 +671,15 @@ color: #0c62e3;
 flex-basis: 50%;
     background-color: rgb(218 214 214 / 36%);
 padding: 30px 0;
+position: relative;
+  right: -600px;
+  transition: var(--transition-section);
+}
+@media (max-width:992px){
+  .contact .container .content-form{
+    flex-basis: 100%;
+    width: 90%;
+  }
 }
 .contact .container .content-form form{
   width: 90%;
@@ -674,6 +693,12 @@ padding: 30px 0;
   display: flex;
   gap: 15px;
 
+}
+@media (max-width:768px){
+  .contact .container .content-form form .input-row{
+    flex-direction: column;
+    width: 96%;
+  }
 }
 .contact .container .content-form form input{
 width: 100%;
@@ -712,3 +737,125 @@ border-radius: 5px;
   color: #fff;
 }
 /* End Contact */
+
+/* Start time */
+.time{
+  background-color: var(--background);
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  overflow: hidden;
+}
+.time .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+@media (max-width:992px){
+  .time .container{
+    flex-direction: column;
+  }
+}
+.time .container .timer{
+flex-basis: 50%;
+padding: 0 100px;
+position: relative;
+left: -600px;
+    transition: var(--transition-section);
+}
+.time .container .timer .time-life{
+/* display: grid;
+grid-template-columns: repeat(auto-fill,minmax(50px ,1fr));
+gap: 30px; */
+
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+    
+
+}
+.time .container .timer .time-life .box{
+    border: 1px solid #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 60px;
+      background-color: var(--main-color);
+      border-radius: 10px;
+      /* gap: 10px; */
+}
+.time .container .timer .time-life .box span:first-child{
+  border-bottom: 1px solid;
+  font-size: 14px;
+  padding: 5px 0;
+  color: #fff;
+}
+.time .container .timer .time-life .box span:last-child{
+  font-size: 22px;
+  padding: 15px 0;
+  color: #fff;
+  font-weight: bold;
+}
+.time .container .timer  p{
+  text-align: center;
+      line-height: 1.7;
+        color: gray;
+}
+.time .container .photo{
+  flex-basis: 50%;
+  position: relative;
+    right: -600px;
+    transition: var(--transition-section);
+}
+.time .container .photo img{
+  max-width: 100%;
+}
+/* End time */
+
+/* Start footer */
+.footer{
+background-color: #000;
+}
+.footer .container{
+  padding: 20px 0;
+}
+.footer ul{
+  list-style: none;
+}
+.footer div{
+
+}
+.footer div .icons{
+padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.footer div .icons li{
+background-color: #fff;
+padding: 10px;
+border-radius: 50%;
+}
+.footer div .icons i{
+font-size: 25px;
+}
+.footer div .links{
+display: flex;
+justify-content: center;
+
+gap: 30px;
+padding: 0;
+margin-top: 40px;
+
+}
+.footer div .links a{
+  text-decoration: none;
+  color: #fff;
+}
+.footer .container p{
+  color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+/* End footer */

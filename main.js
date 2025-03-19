@@ -179,6 +179,28 @@ function scroll(){
 }
 window.addEventListener("scroll", scroll);
 
+// Animate section what I do !
+function animateContact(){
+  let form=document.querySelector(".contact .container .content-form")
+  let info=document.querySelector(".contact .container .info")
+  form.style.cssText='right:0;'
+  info.style.cssText='left:0;'
+  // console.log(form,info)
+}
+
+function scrollContact(){
+  let contact=document.getElementById("contact")
+  let bottomSection=contact.getBoundingClientRect().bottom;
+  let screenHeight=window.innerHeight;
+  if(bottomSection<screenHeight){
+    animateContact()
+    window.removeEventListener("scroll", scrollContact);
+  }
+  
+}
+ window.addEventListener("scroll",scrollContact)
+// whatIDo()
+
 
 // Section About
 let skills=document.getElementById("sectionOfScroll")
@@ -204,3 +226,40 @@ window.onscroll=function(){
 };
  
 
+function timer(){
+  let time=new Date()
+  let hours=time.getHours()
+  let minutes=time.getMinutes()
+  let seconds=time.getSeconds()
+
+  let spanHours=document.getElementById("hours")
+  let spanMinutes=document.getElementById("minutes")
+  let spanSeconds=document.getElementById("seconds")
+  // console.log(spanHours,spanMinutes,spanSeconds)
+  spanHours.textContent=hours <10?`0${hours}`:hours;
+  spanMinutes.textContent=minutes <10?`0${minutes}`:minutes;
+  spanSeconds.textContent=seconds <10?`0${seconds}`:seconds;
+}
+
+setInterval(timer,500)
+
+
+// animate Section time
+function animateTime(){
+  let timer=document.querySelector(".time .container .timer")
+  let photo=document.querySelector(".time .container .photo")
+  timer.style.cssText="left:0;";
+  photo.style.cssText="right:0;";
+}
+
+function scrollTime(){
+  let time=document.getElementById("times")
+  let bottomSection=time.getBoundingClientRect().bottom;
+  let screenHeight=window.innerHeight;
+  if(bottomSection<screenHeight){
+    animateTime()
+    window.removeEventListener("scroll",scrollTime)
+  }
+}
+window.addEventListener("scroll",scrollTime);
+// scrollTime()
