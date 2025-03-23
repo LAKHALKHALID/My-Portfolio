@@ -169,7 +169,7 @@ function scroll(){
   let scrollSection=document.getElementById("sectionOfScroll")
   let topSection=scrollSection.getBoundingClientRect().bottom
   // console.log(topSection)
-  console.log(window)
+  // console.log(window)
 
   let screenHeight=window.innerHeight
   if(topSection<screenHeight){
@@ -192,7 +192,7 @@ function scrollContact(){
   let contact=document.getElementById("contact")
   let bottomSection=contact.getBoundingClientRect().bottom;
   let screenHeight=window.innerHeight;
-  if(bottomSection<screenHeight){
+  if((bottomSection - 300)<screenHeight){
     animateContact()
     window.removeEventListener("scroll", scrollContact);
   }
@@ -214,7 +214,7 @@ window.onscroll=function(){
  
 
   if(window.scrollY>=aboutOfsetTop -100){
-      this.console.log("yes I run")
+      // this.console.log("yes I run")
 
       let imgAbout=document.querySelector(".about .container .image")
       let infoAbout=document.querySelector(".about .container .info")
@@ -256,10 +256,13 @@ function scrollTime(){
   let time=document.getElementById("times")
   let bottomSection=time.getBoundingClientRect().bottom;
   let screenHeight=window.innerHeight;
-  if(bottomSection<screenHeight){
+  if((bottomSection-300) <=screenHeight){
     animateTime()
     window.removeEventListener("scroll",scrollTime)
   }
 }
 window.addEventListener("scroll",scrollTime);
 // scrollTime()
+
+
+
