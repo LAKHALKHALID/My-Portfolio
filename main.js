@@ -5,7 +5,7 @@ let images=["1.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.png"]
 
 setInterval(()=>{
   randomNumber=Math.floor(Math.random()*images.length)
-  landingPage.style.backgroundImage='url("../img/'+images[randomNumber]+'")'
+  landingPage.style.backgroundImage='url("img/'+images[randomNumber]+'")'
 
 },3000)
 
