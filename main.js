@@ -264,5 +264,17 @@ function scrollTime(){
 window.addEventListener("scroll",scrollTime);
 // scrollTime()
 
+// Create Button top
+let home=document.getElementById("lik-home")
+console.log(home.href)
 
+let up=document.createElement("a")
+up.href=home.href
+up.appendChild(document.createTextNode("UP"))
+document.body.appendChild(up)
+up.style.cssText=`position:fixed;color:#fff; background: ${window.localStorage.getItem("color")}; z-index:3000; right:20px;bottom:30px;padding:20px 6px;border-radius:50px;text-decoration: none;font-weight:bold;scroll-behavior: smooth;`
+console.log(up)
 
+// let div =document.createElement("div")
+// div.style.cssText='position:fixed; top:0; left:0; z-index:50000; width:100px; height:100px; background:red;'
+// document.body.append(div)

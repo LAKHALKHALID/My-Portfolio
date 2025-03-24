@@ -5,6 +5,9 @@
 *{
   font-family: OpenSans-Medium;
 }
+html{
+  scroll-behavior: smooth;
+}
 :root{
   --main-color:orange;
   --transition:0.3s;
@@ -176,7 +179,7 @@ position: absolute;
         top: 40px;
         gap: 0;
         padding: 0;
-        z-index: 1000;
+        z-index: 10000;
 
          
   }
@@ -197,6 +200,7 @@ position: absolute;
   overflow: hidden;
   border-radius: 10px;
   transition: var(--transition);
+  
 }
 .landing-page .header .links a::before{
   content: "";
